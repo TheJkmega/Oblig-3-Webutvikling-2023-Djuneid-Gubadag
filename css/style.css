@@ -1,0 +1,78 @@
+#grid-container-index {
+    background-image: url("../img/fppic.png");
+}
+a{
+    text-decoration: none;
+}
+
+#top-page {
+    background-color: darkred;
+}
+
+#top-page h1 {
+    margin: 30px
+}
+
+#top-page h1,
+#top-page #profile {
+    display: inline-block;
+}
+
+#profile {
+    float: right;
+}
+
+#top-page h1 a{
+    color:black;
+}
+
+#top-page p{
+    text-align: right;
+    color: black;
+    font-size: 120%;
+}
+
+#top-page img{   
+    height: 40px;
+    width: 40px;
+}
+
+#top-page img,
+#top-page p {
+    display: inline-block;
+}
+
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: brown;
+}
+
+nav ul li{
+    display: inline-block;
+    padding: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+nav li a{
+    color: black;
+    font-size: 2vw;
+}
+
+footer ul {
+    list-style-type: none;
+    text-align: center;
+    background-color:brown;
+}
+
+footer li {
+    display: inline-block;
+    padding: 40px;
+}
+
+main {
+    padding-bottom: 300px;
+}
