@@ -32,6 +32,10 @@
     grid-template-columns: 1fr 2fr;
 }
 
+body {
+    min-height: 100vh;
+}
+
 a {
     text-decoration: none;
     color: black;
@@ -57,6 +61,10 @@ header {
     grid-template-columns: 1fr 1fr;
 }
 
+#top-page h1 {
+    padding-left: 15px;
+}
+
 #profile {
     display: grid;
     grid-template-columns: 50px 50px;
@@ -65,8 +73,14 @@ header {
     justify-content: end;
 }
 
+#profile p {
+    display: none;
+}
+
 #profile img {
     border-radius: 25px;
+    height: 50px;
+    width: 50px;
 }
 
 nav {
@@ -131,12 +145,9 @@ main {
 }
 
 #similar-items ul {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-column-gap: 10px;
+    display: flex;
+    justify-content: space-between;
 }
-
-
 
 #similar-items img {
     height: 12vw;
@@ -145,15 +156,14 @@ main {
     border-radius: 40px;
 }
 
-.image-container {
-    position: relative;
-    display: inline-block;
+.image-container img {
+    display: none;
 }
 
-.image-container img {
+.image-container-m {
     display: block;
     width: 100%;
-    height: auto;
+    height: 100%;
 }
 
 .overlay-text {
@@ -161,11 +171,11 @@ main {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 6vw;
-    
+    font-size: 3rem;
+    text-decoration:underline;
 }
 
-#profile-info {
+/* #profile-info {
     display: grid;
     grid-template-rows: 260px 50px 50px 100px;
     grid-template-columns: 150px;
@@ -174,15 +184,25 @@ main {
     align-content: start;
     justify-content: center;
     padding-top: 50px;
+} */
+
+#profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#profile-info p {
+    max-width: 10vw;
 }
 
 #profile-info button {
     background-color: palegreen;
-}
+} 
 
 #profile-info img {
     height: 20vw;
-    width: auto;
+    width: 20vw;
     border: 2px solid black;
     border-radius: 200px;
 }
@@ -204,14 +224,12 @@ main {
     grid-template-rows: auto auto;
 }
 
-
 #bought-items img {
     height: 10vw;
     width: 10vw;
     border: 2px solid black;
     border-radius: 25px;
 }
-
 
 footer {
     grid-area: footer;
@@ -225,7 +243,25 @@ footer ul {
     place-items: center;
 }
 
-#profile img {
-    height: 50px;
-    width: 50px;
+@media only screen and (min-width: 1000px) {
+    #profile p {
+        display: block;
+    }
+
+
+    .image-container {
+        position: relative;
+        display: inline-block;
+    }
+    
+    .image-container img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .image-container-m {
+        display: none;
+    }
+    
 }
